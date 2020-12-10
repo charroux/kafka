@@ -1,5 +1,11 @@
 # kafka
 
+## Compatibility
+
+java jdk 11
+
+## Installation
+
 cd kafka_2.13-2.6.0 (depending on the version of Kafka)
 
 ## Start Zookeeper
