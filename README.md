@@ -30,14 +30,22 @@ bin/kafka-topics.sh --create --topic streams-pipe-output --bootstrap-server loca
 ## Write 
 bin/kafka-console-producer.sh --topic streams-plaintext-input --bootstrap-server localhost:9092
 
+Ctlr-c to stop.
+
 ## Read
 bin/kafka-console-consumer.sh --topic streams-pipe-output --from-beginning --bootstrap-server localhost:9092
+
+Ctrl-c to stop.
 
 ## Coding a Stream application
 https://github.com/charroux/kafka/tree/main/stream
 
+Ctrl-c to stop.
+
 ## Coding a consumer application
 https://github.com/charroux/kafka/tree/main/consumer
+
+Ctlr-c to stop.
 
 ## Coding a producer application
 https://github.com/charroux/kafka/tree/main/producer
