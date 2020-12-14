@@ -6,7 +6,11 @@ java jdk 11
 
 ## Installation
 
-cd kafka_2.13-2.6.0 (depending on the version of Kafka)
+Download Kafka: https://www.apache.org/dyn/closer.cgi?path=/kafka/2.6.0/kafka_2.13-2.6.0.tgz
+
+tar -xzf kafka_2.13-2.6.0.tgz
+
+cd kafka_2.13-2.6.0
 
 ## Start Zookeeper
 bin/zookeeper-server-start.sh config/zookeeper.properties
