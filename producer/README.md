@@ -1,4 +1,4 @@
-# kafka stream API
+# kafka producer API
 
 Java JDK 11 compatible
 
@@ -11,7 +11,7 @@ or
 Import this project as Gradle project in Eclipse
 
 ## The Code
-https://github.com/charroux/kafka/blob/main/stream/src/main/java/stream/StreamApplication.java
+https://github.com/charroux/kafka/blob/main/producer/src/main/java/producer/ProducerApplication.java
 
 
 

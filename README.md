@@ -34,4 +34,4 @@ bin/kafka-console-producer.sh --topic streams-plaintext-input --bootstrap-server
 bin/kafka-console-consumer.sh --topic streams-pipe-output --from-beginning --bootstrap-server localhost:9092
 
 ## Coding a Stream application
-
+https://github.com/charroux/kafka/tree/main/stream
