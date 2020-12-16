@@ -50,14 +50,31 @@ https://dzone.com/articles/running-apache-kafka-on-windows-os
 ## Coding a Stream application
 https://github.com/charroux/kafka/tree/main/stream
 
+Open the Stream project in Eclipse,
+or import it as Gradle project in Intellij.
+
+Then start the main program: https://github.com/charroux/kafka/blob/main/stream/src/main/java/stream/StreamApplication.java
+
+Type commands inside the writer terminal, and inspect the reader terminal. 
+
 Ctrl-c to stop.
-
-## Coding a consumer application
-https://github.com/charroux/kafka/tree/main/consumer
-
-Ctlr-c to stop.
 
 ## Coding a producer application
 https://github.com/charroux/kafka/tree/main/producer
 
+Open the Producer project in Eclipse,
+or import it as Gradle project in Intellij.
+
+Launch the main program: https://github.com/charroux/kafka/blob/main/producer/src/main/java/producer/ProducerApplication.java
+
+## Coding a consumer application
+https://github.com/charroux/kafka/tree/main/consumer
+
+Open the Consumer project in Eclipse,
+or import it as Gradle project in Intellij.
+
+Launch the main program: https://github.com/charroux/kafka/blob/main/consumer/src/main/java/consumer/ConsumerApplication.java
+Then inspect again the reader terminal and the reader project.
+
+Ctlr-c to stop.
 
