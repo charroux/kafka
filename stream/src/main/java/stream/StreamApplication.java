@@ -2,6 +2,8 @@ package stream;
 
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.*;
+import org.apache.kafka.streams.kstream.KStream;
+import org.apache.kafka.streams.kstream.Printed;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -27,7 +29,18 @@ public class StreamApplication implements CommandLineRunner {
 
 		final StreamsBuilder builder = new StreamsBuilder();
 
-		builder.stream("streams-plaintext-input").to("streams-pipe-output");
+		KStream<String, String> source = builder.stream("streams-plaintext-input");
+
+		KStream<String, String>[] forks = source
+				.mapValues(s -> s.toUpperCase())
+				.filter((key, value) -> value.contains("PSG") || value.contains("OM"))
+				.branch(
+						(key, value) -> value.contains("PSG"),
+						(key, value) -> value.contains("OM"));
+
+		forks[0].to("streams-pipe-output");
+
+		forks[1].print(Printed.toSysOut());
 
 		final Topology topology = builder.build();
 
