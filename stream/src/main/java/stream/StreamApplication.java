@@ -29,20 +29,9 @@ public class StreamApplication implements CommandLineRunner {
 
 		final StreamsBuilder builder = new StreamsBuilder();
 
-		KStream<String, String> source = builder.stream("streams-plaintext-input");
+		KStream<String, String> source = builder.stream("streams-plaintext-input").to("streams-pipe-output");
 
-		KStream<String, String>[] forks = source
-				.mapValues(s -> s.toUpperCase())
-				.filter((key, value) -> value.contains("PSG") || value.contains("OM"))
-				.branch(
-						(key, value) -> value.contains("PSG"),
-						(key, value) -> value.contains("OM"));
-
-		forks[0].to("streams-pipe-output");
-
-		forks[1].print(Printed.toSysOut());
-
-		final Topology topology = builder.build();
+		final Topology topology = source.build();
 
 		System.out.println(topology.describe());
 
