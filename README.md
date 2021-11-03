@@ -50,8 +50,8 @@ https://dzone.com/articles/running-apache-kafka-on-windows-os
 ## Coding a Stream application
 https://github.com/charroux/kafka/tree/main/stream
 
-Open the Stream project in Eclipse,
-or import it as Gradle project in Intellij.
+Open the Stream project in Gradle,
+or import it as Gradle project in Eclipse.
 
 Then start the main program: https://github.com/charroux/kafka/blob/main/stream/src/main/java/stream/StreamApplication.java
 
