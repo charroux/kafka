@@ -51,16 +51,17 @@ https://dzone.com/articles/running-apache-kafka-on-windows-os
 
 This installation is based on the provided docker compose file: https://github.com/charroux/kafka/blob/main/docker/docker-compose.yml
 
-Open a command line windows in the docker directory, and type the command: docker-compose up -d
+Open a command line windows in the docker directory where is the docker-compose file, and type the command: docker-compose up -d
 
 Take care that Kafka is running on port 29092.
 
 ### Stopping Kafka
 
 List the containers: docker ps
+
 Stop the containers: docker stop [containerID]  
 
-### Inspect the cluster
+## Inspect the cluster
 
 Additionaly you can install a UI tool for Kafka: https://kafkatool.com/
 
@@ -69,7 +70,7 @@ Start offset explorer.
 ### Adding a cluster
 
 Give it a name.
-In the advanced tab type localhost:29092 or localhost:9092 (depending on the used port) in the Bootstrap servers field.
+In the advanced tab, type localhost:29092 or localhost:9092 (depending on the used port) in the Bootstrap servers field.
 
 ## Coding a Stream application
 https://github.com/charroux/kafka/tree/main/stream
