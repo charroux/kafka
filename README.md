@@ -2,7 +2,7 @@
 
 ## Compatibility
 
-java jdk 11
+java jdk 11.
 
 ## Installation for Linux
 
