@@ -103,3 +103,16 @@ Then inspect again the reader terminal and the reader project.
 
 Ctlr-c to stop.
 
+## Coding a Processor application
+https://github.com/charroux/kafka/tree/main/processor
+
+Open the Stream project in Gradle,
+or import it as Gradle project in Eclipse.
+
+Then start the main program: https://github.com/charroux/kafka/blob/main/processor/src/main/java/processor/ProcessorApplication.java
+
+Type commands inside the writer terminal, and inspect the reader terminal. 
+
+Ctrl-c to stop.
+
+
