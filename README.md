@@ -115,4 +115,16 @@ Type commands inside the writer terminal, and inspect the reader terminal.
 
 Ctrl-c to stop.
 
+## Coding a transformer application
+https://github.com/charroux/kafka/tree/main/transformer
+
+Open the Stream project in Gradle,
+or import it as Gradle project in Eclipse.
+
+Then start the main program: https://github.com/charroux/kafka/blob/main/transformer/src/main/java/transformer/TransformerApplication.java
+
+Type commands inside the writer terminal, and inspect the reader terminal. 
+
+Ctrl-c to stop.
+
 
