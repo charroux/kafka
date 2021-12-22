@@ -1,7 +1,8 @@
-package processor;
+package transformer;
 
 import org.apache.kafka.common.record.Record;
 import org.apache.kafka.streams.KeyValue;
+import org.apache.kafka.streams.kstream.Transformer;
 import org.apache.kafka.streams.kstream.TransformerSupplier;
 import org.apache.kafka.streams.processor.Processor;
 import org.apache.kafka.streams.processor.ProcessorContext;
@@ -11,20 +12,19 @@ import org.apache.kafka.streams.state.KeyValueIterator;
 
 import java.time.Duration;
 
-public class FootballTeamProcessorSupplier implements ProcessorSupplier<String, String> {
+public class FootballTeamTransformerSupplier implements TransformerSupplier<String, String, KeyValue<String, String>> {
     @Override
-    public Processor<String, String> get() {
-        return new Processor<String, String>() {
-            private ProcessorContext context;
+    public Transformer<String, String, KeyValue<String, String>> get() {
+        return new Transformer<String, String, KeyValue<String, String>>(){
+
             @Override
             public void init(ProcessorContext context) {
-                this.context = context;
             }
 
             @Override
-            public void process(String key, String value) {
-                System.out.println("Processor -------------> key: " + key + ", value: " + value);
-                context.forward(key, value);
+            public KeyValue<String, String> transform(String key, String value) {
+                System.out.println("Transform --------------------> key:" + key + ", value:" + value);
+                return KeyValue.pair(key, value);
             }
 
             @Override
@@ -32,5 +32,6 @@ public class FootballTeamProcessorSupplier implements ProcessorSupplier<String, 
 
             }
         };
+
     }
 }
